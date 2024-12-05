@@ -9,7 +9,7 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
-        maven { url 'https://jitpack.io'}
+        maven { url 'https://jitpack.io' }
     }
 }
 dependencyResolutionManagement {
@@ -17,10 +17,13 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven { url 'https://jitpack.io'}
+        maven { url 'https://jitpack.io' }
     }
 }
 
 rootProject.name = "DynamicJsonViewer"
+
 include ':app'
 include ':dynamic-json-viewer'
+// include ':module'
+// project(":module").projectDir = new File(rootProject.projectDir.path + "/dynamic-json-viewer")
