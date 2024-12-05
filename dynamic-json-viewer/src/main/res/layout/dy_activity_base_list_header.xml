@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/__dy_toolbar_layout__"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/wechat_gray_line"
+        app:elevation="1dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/__dy_toolbar__"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/WechatTheme_ToolBarPopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        layout="@layout/dy_item_common_empty_line"
+        android:id="@+id/__dy_toolbar_under_line__"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/__dy_toolbar_layout__">
+    </include>
+
+    <LinearLayout
+        android:id="@+id/__dy_list_header_layout__"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:orientation="horizontal"
+
+        android:layout_below="@+id/__dy_toolbar_under_line__"
+        >
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/__dy_list_view__"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fastScrollEnabled="true"
+        android:textFilterEnabled="true"
+
+        android:background="@color/wechat_gray"
+
+        android:dividerHeight="0dp"
+        android:divider="@android:color/transparent"
+
+        android:layout_below="@+id/__dy_list_header_layout__"
+        android:scrollbars="none"
+
+        />
+
+</RelativeLayout>

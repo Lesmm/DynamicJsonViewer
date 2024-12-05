@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="wechat_transparent">#00000000</color>
+
+    <color name="wechat_gray">#ECECEC</color>
+    <color name="wechat_gray_8f">#8f8f8f</color>
+    <color name="wechat_gray_line">#E5E5E5</color>
+    <color name="wechat_red">#FF0000</color>
+    <color name="wechat_green">#07C060</color>
+    <color name="wechat_white">#FDFDFE</color>
+    <color name="wechat_black">#000000</color>
+    <color name="wechat_green_dark">#069149</color>
+    <color name="wechat_white_dart">#F6F6F6</color>
+    <color name="wechat_all_gray">#808080</color>
+    <color name="wechat_all_black">#000000</color>
+
+
+</resources>

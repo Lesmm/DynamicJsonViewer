@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/__dy_item_container_layout__"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:background="@drawable/dy_item_common_back_shape_rectangle"
+        >
+
+
+        <ImageView
+            android:id="@+id/dyItemCenterImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+
+            android:visibility="invisible"
+            android:src="@mipmap/wechat_icon_loading" />
+
+
+        <TextView
+            android:id="@+id/dyItemCenterTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+
+            android:text="退出登录"
+            android:textColor="@color/wechat_red"
+            android:textSize="16dp" />
+
+
+        <TextView
+            android:id="@+id/dyItemCenterDetailView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+
+            android:visibility="invisible"
+
+            android:text="正在加载..."
+            android:textColor="@color/wechat_all_gray"
+            android:textSize="10dp" />
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
