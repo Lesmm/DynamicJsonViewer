@@ -3,9 +3,11 @@ package com.dynamic.json.viewer.util;
 import android.content.res.AssetManager;
 
 import com.dynamic.json.viewer.DyRenderApi;
+import com.dynamic.json.viewer.util.json.JSONArrayUtil;
 import com.dynamic.json.viewer.util.json.JSONObjectUtil;
 import com.dynamic.json.viewer.util.json.JSONUtil;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.File;
@@ -15,9 +17,26 @@ import java.util.Arrays;
 
 public class DyAssetser {
 
-    public static JSONObject getAssetsAsJson(String assetsItemPath) {
+    public static Object getAssetsAsJson(String assetsItemPath) {
+        Object json = getAssetsAsJsonObject(assetsItemPath);
+        if (json == null) {
+            json = getAssetsAsJsonArray(assetsItemPath);
+        }
+        return json;
+    }
+
+    public static JSONObject getAssetsAsJsonObject(String assetsItemPath) {
         try {
             return JSONObjectUtil.createJSONObject(getAssetsAsString(assetsItemPath));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static JSONArray getAssetsAsJsonArray(String assetsItemPath) {
+        try {
+            return JSONArrayUtil.createJSONArray(getAssetsAsString(assetsItemPath));
         } catch (Exception e) {
             e.printStackTrace();
         }

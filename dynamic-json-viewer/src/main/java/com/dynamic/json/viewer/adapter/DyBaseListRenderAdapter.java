@@ -53,7 +53,7 @@ public class DyBaseListRenderAdapter extends DyBaseListAdapter {
 
             // get file name
             String listRenderJsonFileName = getListRenderJsonFileName(mContext);
-            JSONObject json = DyAssetser.getAssetsAsJson("render/" + listRenderJsonFileName);
+            JSONObject json = DyAssetser.getAssetsAsJsonObject("render/" + listRenderJsonFileName);
             if (json != null) {
                 initializeRenderJson(json);
             }

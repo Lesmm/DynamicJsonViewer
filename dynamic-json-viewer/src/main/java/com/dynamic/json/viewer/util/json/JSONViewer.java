@@ -105,19 +105,21 @@ public class JSONViewer {
 
     public JsonEvent jsonEvent = null;
 
-    private JSONObject wholeJson = null;
+    // JSONObject or JSONArray
+    private Object wholeJson = null;
 
     private String wholeJsonFilePath = null;
 
     public List<DyBaseListActivity> activityStack = new ArrayList<>();
 
-    public void show(String title, JSONObject json, String jsonFilePath) {
+    public void show(String title, Object json, String jsonFilePath) {
         wholeJson = json;
         wholeJsonFilePath = jsonFilePath;
         __showJsonElements__(title, null);
     }
 
-    public JSONObject getJson() {
+    // JSONObject or JSONArray
+    public Object getJson() {
         return wholeJson;
     }
 

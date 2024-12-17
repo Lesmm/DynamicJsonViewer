@@ -314,7 +314,7 @@ public class DyRenderHelper {
         DyBaseListRenderAdapter listAdapter = new DyBaseListRenderAdapter(mContext);
         listAdapter.setEvent(event);
 
-        JSONObject json = DyAssetser.getAssetsAsJson("render/" + renderJsonPathInAssets);
+        JSONObject json = DyAssetser.getAssetsAsJsonObject("render/" + renderJsonPathInAssets);
         if (json != null) {
             listAdapter.initializeRenderJson(json);
         }
